@@ -1,10 +1,15 @@
-// Step 1: Accept `fetchJoke` as a prop
+import React from 'react';
 
+// Button component that triggers a new joke fetch when clicked
 const FetchButton = ({ fetchJoke }) => {
   return (
-    // Step 2: Add an onClick event that calls `fetchJoke`
-    <button className="fetch-button">Get a New Joke</button>
-  )
+    <button 
+      className="fetch-button"
+      onClick={fetchJoke} // calls the fetch function from props
+    >
+      Get a New Joke
+    </button>
+  );
 }
 
-export default FetchButton
+export default FetchButton;
